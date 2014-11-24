@@ -11,13 +11,10 @@ The documentation is structured as follows:
 * **Raspberry Pi Documentation** explains how to develop for your Raspberry Pi boards using biicode. Biicode technology simplifies these projects making easier both native compiling and cross compiling. You'll find a simple getting-started project along with many others.
 * **Node.js Documentation** contains specific tools, commands and examples for developing Node.js projects with the help of biicode.
 
-Feel free to select the documentation section of your interest from the following **table of contents**. You can also browse the different sections selecting one option form the menu above.
-
 .. toctree::
    :maxdepth: 3
 
-   biicode
-   c++
+   userguide
    raspberrypi
    arduino
    nodejs
