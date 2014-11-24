@@ -1,8 +1,8 @@
 .. _user_guide_index:
 
-About biicode
+Biicode
 ==============
-Multiplatform C and C++ dependency manager. 
+Multi-platform C and C++ dependency manager. 
 
 .. toctree::
    :maxdepth: 2

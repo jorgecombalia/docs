@@ -3,16 +3,30 @@
 Installation
 ============
 
-This section describes the **first basic steps that are mandatory in order to use the biicode technology on any computer**, regardless the target platform (desktop, raspberry Pi, Arduino…) or operating system.
+These are the **first basic steps to understand and use biicode on any computer**.
+
+**Biicode is a file-oriented Dependencies Manager for C and C++ developers**:
+
 
 .. _download_client_binaries:
 
 1. Download Biicode Installer
 -----------------------------
 
-Now, `download the appropriate installer for your development platform <https://www.biicode.com/downloads>`_, execute the setup program and follow the instructions.
+Download the` latest release of the Biicode Installer <https://www.biicode.com/downloads>`_ and double-click the downloaded package to install it.
+Check its features on the:ref:`release notes <release_notes>`.
 
-**Biicode is an evolving technology**, and many modifications and improvements are introduced weekly with our releases. Rememeber to check frequently for new versions of the client, consult the :ref:`release notes <changelog>`.
+Then, open the terminal and type:
+
+.. code-block:: bash
+
+   ~$ bii setup:cpp
+
+To install tools like CMake and MinGW or GCC.
+
+.. container:: infonote
+
+    If any problem installing the C/C++ tools, check :ref:`how to install C/C++ tools manually <cpp_installation>`
 
 
 .. _alternative_install_debian:
@@ -22,7 +36,7 @@ Now, `download the appropriate installer for your development platform <https://
 
     **Alternative install for Debian based distributions (Ubuntu, Raspbian)**
 
-    You can use the ``apt-get`` program for installing biicode using our APT repository:
+    You can use the ``apt-get`` program to install biicode through the APT repository:
 
     Quick install: 
 
@@ -77,11 +91,115 @@ Now, `download the appropriate installer for your development platform <https://
     Since the package is maintained in the AUR, your package manager will notify you automatically when we update the package.
 
 
-2. Choose the development tools
+.. _cpp_installation:
+
+2. Install C/C++ tools manually
 --------------------------------
 
-Finally, **you may need to install some additional tools dependending on your development language**. Select your language from the list bellow. You will be redirected to the specific documentation section for that particular language, where you will find more information and resources. Don't forget to come back to this general section, and learn more about :ref:`advanced features <advanced_features>`.
+Install, set up and verify some **tools to build C and C++ projects with biicode**. 
 
+Follow these steps if something failed during the automatic installation explained before. If you experience any issues, please `contact us at our forum <http://forum.biicode.com/category/client>`_, we'll try to solve your problem as soon as possible.
+
+.. container:: tabs-section
+     
+    .. _cpp_desktop_linux:
+    .. container:: tabs-item
+
+        .. rst-class:: tabs-title
+            
+            Linux
+
+        Install the required development tools as root:
+
+        .. code-block:: bash
+
+            $ sudo apt-get install build-essential cmake
+
+        That's all!
+
+    .. _cpp_desktop_mac:
+    .. container:: tabs-item
+
+        .. rst-class:: tabs-title
+            
+            MacOS
+
+        You need to get installed both XCode Developer Tools and CMake:
+
+        #. The XCode Developer Tools
+
+           .. code-block:: bash
+
+            $ xcode-select --install
+
+
+        #. Download and install the appropriate `version of CMake <http://www.cmake.org/cmake/resources/software.html>`_ for your Mac OSX.
+
+    .. _cpp_desktop_win:
+    .. container:: tabs-item
+
+        .. rst-class:: tabs-title
+
+            Windows
+
+        To develop C/C++ programs in Windows you need:
+
+        - `CMake <http://www.cmake.org/>`_. Open Source tool that manages the software building process in a compiler-independent manner.
+
+        - Compilers and build system. This could be one of the following (among other alternatives):
+
+           - `MinGW <http://www.mingw.org/>`_ (make sure to include gcc, g++, and mingw32-make with your installation)
+           - Visual Studio C++
+
+
+        These are the **steps for manual installation** of our recommended tools:
+
+        1. Download and install CMake. You can `download the latest version of CMake here <http://www.cmake.org/cmake/resources/software.html>`_.
+
+        2. Download and install "base, g++" packages of MinGW. Follow `this link <http://sourceforge.net/projects/mingw/files/Installer/>`_ to get the installer, and choose while installing two additional packages, GCC and G++ package.
+
+        3. Add to your user ``PATH`` environment variable the paths to these tools. We recommend `Rapid Environment Editor <http://www.rapidee.com/>`_ for editing environment variables. Otherwise, go to **My Computer**, click **Properties**, click **Advanced System Settings** and in the System Properties window click the **Environment Variables** button. then you will see a new window and in **User Variables** you'll find the variable ``PATH``:
+
+           .. image:: /_static/img/cpp_windows_path.png
+
+        Add your tools binaries folders (i.e. ``C:\MinGW\bin`` gor MiGW, and ``C:\Program Files (x86)\CMake 2.8\bin`` for CMake).
+
+        You might need to close and open again any ``cmd`` windows in order to load the new value for the ``PATH`` variable.
+
+
+3. Verify your installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To check your automatic installation open the Terminal and type ``bii setup:cpp``. To check your manual installation, run the following commands. If the output messages look similar to these, the tools are successfully installed.
+
+.. code-block:: bash
+
+    $ cmake --version
+    cmake version [version]
+
+.. code-block:: bash
+    
+    $ gcc --version
+    gcc (GCC) [version]
+    ...
+
+.. code-block:: bash
+    
+    $ g++ --version
+    g++ (GCC) [version]
+    ...
+    
+.. code-block:: bash
+    
+    $ mingw32-make --version
+    GNU Make [version]
+    ...
+
+
+Next steps
+^^^^^^^^^^^
+
+Next, let's start learning how to Get Started with biicode:
 
 .. container:: todo
 
