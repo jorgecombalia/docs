@@ -3,7 +3,7 @@
 Build configuration
 ===================
 
-Biicode uses CMake to configure and build your projects. In this section, we explain you how we work with it.
+Biicode uses CMake to configure and build your projects. In this section, you'll learn how to work with it.
 
 
 .. _cmake_introduction:

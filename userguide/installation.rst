@@ -5,16 +5,16 @@ Installation
 
 These are the **first basic steps to understand and use biicode on any computer**.
 
-**Biicode is a file-oriented Dependencies Manager for C and C++ developers**:
+**Biicode** is a file-oriented Dependencies Manager for C and C++ developers.
 
 
 .. _download_client_binaries:
 
-1. Download Biicode Installer
------------------------------
+1. Install Biicode and dev tools
+--------------------------------
 
-Download the` latest release of the Biicode Installer <https://www.biicode.com/downloads>`_ and double-click the downloaded package to install it.
-Check its features on the:ref:`release notes <release_notes>`.
+Download the `latest release of the Biicode Installer <https://www.biicode.com/downloads>`_ and double-click the downloaded package to install it.
+Check its features on the :ref:`release notes <release_notes>`.
 
 Then, open the terminal and type:
 
@@ -207,3 +207,15 @@ Next, let's start learning how to Get Started with biicode:
     * :ref:`Arduino Getting Started <arduino_getting_started>`
     * :ref:`Raspberry Pi (cross compiling) Getting Started <rpi_getting_started>`
     * :ref:`Node.js Getting Started <node_getting_started>`
+
+
+If you have any questions, we are available at |biicode_forum_link|. You can also |biicode_write_us| for suggestions and feedback.
+
+.. |biicode_forum_link| raw:: html
+
+   <a href="http://forum.biicode.com" target="_blank">biicode's forum</a>
+ 
+
+.. |biicode_write_us| raw:: html
+
+   <a href="mailto:info@biicode.com" target="_blank">write us</a>

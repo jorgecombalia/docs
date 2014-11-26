@@ -2,6 +2,7 @@
 
 Biicode
 ==============
+
 Multi-platform C and C++ dependency manager. 
 
 .. toctree::
@@ -10,8 +11,8 @@ Multi-platform C and C++ dependency manager.
    userguide/installation
    userguide/gettingstarted
    userguide/ides
-   userguide/dependencies
    userguide/building
+   userguide/dependencies
    userguide/integration
    userguide/examples
    userguide/edit-update
