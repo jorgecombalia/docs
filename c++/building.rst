@@ -3,7 +3,9 @@
 Build configuration
 ===================
 
-Biicode uses CMake to configure and build your projects. In this section, you'll learn how to work with it.
+Biicode uses CMake to configure and build your projects. The :ref:`basics on building configuration and IDE's<generators_ide>` is a great place to start.
+
+Here, you'll learn how to define your **CMakeLists.txt** to delve into full functionality.
 
 
 .. _cmake_introduction:
@@ -11,7 +13,7 @@ Biicode uses CMake to configure and build your projects. In this section, you'll
 Define build targets
 ----------------------
 
-A CMakeLists.txt file has been automatically created for you in the previous examples. Lets return back to the original ``myproject`` to check it and learn how to adapt it to your needs. The layout is: ::
+``bii cpp:build`` creates a default settings CMakeLists.txt file.   ``myproject`` to check it and learn how to adapt it to your needs. The layout is: ::
 
 
   +-- myproject

@@ -3,8 +3,7 @@
 Generators and IDEs
 ===================
 
-Generate biicode projects for many IDEs and platforms with CMake. By default, biicode configures your
-projects with MinGW Makefiles (Windows) or UNIX Makefiles (MacOS and Linux) and no IDE.
+Basics to generate biicode projects for many IDEs and platforms with CMake. To delve into the specifics of building with CMake visit :ref:`building guide<cpp_building>`. By default, biicode configures your projects with MinGW Makefiles (Windows) or UNIX Makefiles (MacOS and Linux) and no IDE.
 
 Execute ``cmake --help`` to see the full list of CMake generators available in your system:
 
@@ -16,7 +15,7 @@ Choose yours, and tell biicode to configure your project for that IDE:
 
 .. code-block:: bash
 
-	$ bii cpp:conifigure -G "CMake Generator Name"
+	$ bii cpp:configure -G "CMake Generator Name"
 
 
 .. _ide_eclipse:

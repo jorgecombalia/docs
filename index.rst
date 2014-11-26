@@ -16,7 +16,7 @@ The documentation includes:
 .. toctree::
    :maxdepth: 3
 
-   userguide
+   c++
    arduino
    raspberrypi
    nodejs
