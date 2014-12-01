@@ -14,7 +14,7 @@ Biicode let you open, modify and publish a new version of an already published b
 Next steps explain how to do it.
 
 
-1. Open and edit your dependencies
+Open and edit your dependencies
 ----------------------------------
 
 Following with the previous example, your layout is something like this:
@@ -99,7 +99,7 @@ Now, we can add the new functionality and change the main.cpp to test the **subs
 You can build with ``bii cpp:build`` and run your tests ``myuser_math_main`` again to check everything is fine.
 
 
-2. Publish updated code
+Publish updated code
 -----------------------
 
 Now we can publish the math block again. As now we have 2 opened blocks (calc, math), we have
@@ -119,7 +119,7 @@ A new version is not created and thus **parents.bii** file remains unmodified:
    * myuser/math: 0
 
 
-3. Close edited block
+Close edited block
 ---------------------
 
 You can now close the **myuser/math** block, it and it will return, with the code already updated, to your ``deps`` folder:

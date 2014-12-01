@@ -386,3 +386,17 @@ To ensure the program is working, build and execute:
    ~/boost_project$ bii cpp:build
    ~/boost_project$ bin\phil_boost_example_main
    Usage: server <port>
+
+
+**Got any doubts?** |biicode_forum_link| or |biicode_write_us|.
+
+
+.. |biicode_forum_link| raw:: html
+
+   <a href="http://forum.biicode.com" target="_blank">Ask in our forum </a>
+
+
+.. |biicode_write_us| raw:: html
+
+   <a href="mailto:info@biicode.com" target="_blank">write us</a>
+

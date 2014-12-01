@@ -10,7 +10,7 @@ These are the **first basic steps to understand and use biicode on any computer*
 
 .. _download_client_binaries:
 
-1. Install Biicode and dev tools
+Install Biicode and dev tools
 --------------------------------
 
 Download the `latest release of the Biicode Installer <https://www.biicode.com/downloads>`_ and double-click the downloaded package to install it.
@@ -93,7 +93,7 @@ To install tools like CMake and MinGW or GCC.
 
 .. _cpp_installation:
 
-2. Install C/C++ tools manually
+Install C/C++ tools manually
 --------------------------------
 
 Install, set up and verify some **tools to build C and C++ projects with biicode**. 
@@ -167,7 +167,7 @@ Follow these steps if something failed during the automatic installation explain
         You might need to close and open again any ``cmd`` windows in order to load the new value for the ``PATH`` variable.
 
 
-3. Verify your installation
+Verify your installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To check your automatic installation open the Terminal and type ``bii setup:cpp``. To check your manual installation, run the following commands. If the output messages look similar to these, the tools are successfully installed.

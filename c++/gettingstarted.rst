@@ -16,7 +16,7 @@ This guide shows how to install biicode, build your first C/C++ program, and how
    <a href="https://www.biicode.com/google/gtest target="_blank">GTest is already in biicode!</a>
 
 
-1. Installing biicode and C/C++ tools
+Installing biicode and C/C++ tools
 -------------------------------------
 
 |downloads_link| and install biicode
@@ -40,7 +40,7 @@ To install required tools as CMake. It's best to start using a plain editor (Not
 
 .. _cpp_create_project:
 
-2. Create your project
+Create your project
 ----------------------
 
 Create a project, type:
@@ -74,7 +74,7 @@ This should be the resulting layout:
   |    +-- deps
 
 
-3. Build and run your program
+Build and run your program
 -----------------------------
 Build and run the hello world application to check if everything works:
 
@@ -95,7 +95,7 @@ Build and run the hello world application to check if everything works:
 
 
 
-4. Depending on Google Test
+Depending on Google Test
 ---------------------------
 
 Copy the following code into the **main.cpp** file:
@@ -147,7 +147,7 @@ Check your ``deps`` folder, the GoogleTest code is there.
 .. _cpp_publish_reuse:
 
 
-5. Upload and reuse code
+Upload and reuse code
 -------------------------
 
 After using a lib already in biicode (GTest), let's see how to make your libs available on biicode.
