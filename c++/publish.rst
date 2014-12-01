@@ -1,6 +1,6 @@
-.. _cpp_building:
+.. _cpp_publishing:
 
-Build configuration
+Publishing Options
 ===================
 
 Biicode uses CMake to configure and build your projects. The :ref:`basics on building configuration and IDE's<generators_ide>` is a great place to start.

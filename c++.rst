@@ -13,6 +13,7 @@ A multi-platform C and C++ dependency manager.
    c++/ides
    c++/building
    c++/dependencies
+   c++/publish
    c++/integration
    c++/examples
    c++/edit-update

@@ -18,6 +18,14 @@ Choose yours, and tell biicode to configure your project for that IDE:
 	$ bii cpp:configure -G "CMake Generator Name"
 
 
+``bii cpp:configure`` admits any CMake directives.
+
+.. container:: infonote
+
+     
+     ``bii clean`` command restores your project's settings to MinGW Makefiles (Windows) or UNIX Makefiles (MacOS and Linux) and no IDE.  
+
+
 .. _ide_eclipse:
 
 Eclipse CDT
@@ -49,10 +57,6 @@ You can build your application in *Project > Build project* if you don't have au
   $ bii cpp:configure -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=DEBUG
   $ bii cpp:build
 
-
-.. container:: infonote
-
-     ``bii clean`` command deletes Eclipse project's configuration.
 
 
 If you are using  Eclipse with **OS X** as development platform, you will need some additional setup to execute your binaries within this IDE. :ref:`Read this troubleshooting section for more information <eclipse_osx_binaries>`.
@@ -87,12 +91,6 @@ For example:
 
   $ bii cpp:configure -G "Visual Studio 9 2008" -D CMAKE_BUILD_TYPE=DEBUG
   $ bii cpp:build
-
-
-.. container:: infonote
-
-     ``bii clean`` command deletes your project's configuration.
-
 
 
 If you have any questions, we are available at |biicode_forum_link|. You can also |biicode_write_us| for suggestions and feedback.
