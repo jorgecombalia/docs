@@ -16,10 +16,13 @@ Build your first C/C++ program and run a unit test using the |google_test_link| 
    <a href="https://www.biicode.com/google/gtest target="_blank">GTest is already in biicode!</a>
 
 
+
 .. _cpp_create_project:
 
-Building and Running a program
+Building and running a program
 -------------------------------
+Make sure :ref:`biicode is installed<first_steps>`.
+
 Create a project
 ^^^^^^^^^^^^^^^^
 
@@ -167,8 +170,8 @@ Make sure you've |biicode_signup| to publish. It's **free**.
    <b><a href="https://www.biicode.com/accounts/signup" target="_blank">got an account</a></b>
 
 
-Developing and Reusing
-----------------------
+Reusing
+--------
 
 Write reusable code
 ^^^^^^^^^^^^^^^^^^^

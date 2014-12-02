@@ -19,6 +19,13 @@ Open the terminal and **make sure biicode is installed**:
 
    ~$ bii --version
 
+.. container:: infonote
+
+    Check alternative installations for:
+
+    *  :ref:`Debian based distrobutions <alternative_install_debian>`
+    *  :ref:`Arch based distrobutions <alternative_install_archlinux>`
+
 
 Install C/C++ tools
 --------------------
@@ -32,8 +39,21 @@ Then install required tools like CMake and MinGW or GCC:
 
 .. container:: infonote
 
-    If any problem installing the C/C++ tools, check :ref:`how to install C/C++ tools manually <cpp_installation>`
+    If any problem installing C/C++ tools, check :ref:`how to install C/C++ tools manually <cpp_installation>`
 
+Execute again to check the tools are installed:
+
+.. code-block:: bash
+
+   ~$ bii setup:cpp
+   CMake 3.0.2 already installed
+   gcc 4.8.2 already installed
+   g++ 4.8.2 already installed
+
+
+.. container:: todo
+
+    **You're now ready to** :ref:`get started.<cpp_getting_started>`.
 
 .. _alternative_install_debian:
 
@@ -200,18 +220,6 @@ To check your automatic installation open the Terminal and type ``bii setup:cpp`
     GNU Make [version]
     ...
 
-
-Next steps
-^^^^^^^^^^^
-
-Next, let's start learning how to Get Started with biicode:
-
-.. container:: todo
-
-    * :ref:`C/C++ Getting Started <cpp_getting_started>`
-    * :ref:`Arduino Getting Started <arduino_getting_started>`
-    * :ref:`Raspberry Pi (cross compiling) Getting Started <rpi_getting_started>`
-    * :ref:`Node.js Getting Started <node_getting_started>`
 
 
 If you have any questions, we are available at |biicode_forum_link|. You can also |biicode_write_us| for suggestions and feedback.

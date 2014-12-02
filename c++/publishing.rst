@@ -1,7 +1,7 @@
 .. _cpp_publishing:
 
-Publishing Options
-===================
+Publishing 
+==========
 
 :ref:`bii publish<bii_publish_command>` command, publishes your code to biicode. 
 

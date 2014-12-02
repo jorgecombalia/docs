@@ -99,7 +99,7 @@ Write your preferred versions on your ``requirements.bii`` and biicode will use 
 	erincatto/box2d: 10
 	diego/glfw:1
 
-Checking Dependencies
+Checking dependencies
 ----------------------
 Execute ``bii deps`` to get all information related to biicode’s dependency scanning. It shows all dependencies, system, local and biicode's. 
 

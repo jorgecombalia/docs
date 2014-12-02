@@ -1,10 +1,10 @@
 .. _cpp_edit_update:
 
 
-Open published code
-====================
+Workflows
+==========
 
-Open the block locally to modify and publish a new version of a block.
+Open a block locally to modify and publish a new version of a block.
 
 .. code-block:: bash
 
