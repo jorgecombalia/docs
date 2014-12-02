@@ -4,7 +4,7 @@
 Getting started
 ===============
 
-This guide shows how to install biicode, build your first C/C++ program, and how to run a unit test using the |google_test_link| on biicode. You don't need to install GTest, biicode downloads and configures it automatically for you, |google_test_biicode_link|.
+Build your first C/C++ program and run a unit test using the |google_test_link| on biicode. You don't need to install GTest, biicode downloads and configures it automatically for you, |google_test_biicode_link|.
 
 
 .. |google_test_link| raw:: html
@@ -16,34 +16,15 @@ This guide shows how to install biicode, build your first C/C++ program, and how
    <a href="https://www.biicode.com/google/gtest target="_blank">GTest is already in biicode!</a>
 
 
-Installing biicode and C/C++ tools
--------------------------------------
-
-|downloads_link| and install biicode
-
-.. |downloads_link| raw:: html
-
-   <b><a href="https://www.biicode.com/downloads" target="_blank">Download</a></b>
-   
-
-Then, open the console and type:
-
-.. code-block:: bash
-
-   ~$ bii setup:cpp
-
-To install required tools as CMake. It's best to start using a plain editor (Notepad++, Sublime, Gedit) and GNU based compilers (MinGW for Windows, Gcc in Nix).
-
-.. container:: infonote
-
-    If any problem installing the C/C++ tools, check :ref:`how to install C/C++ tools manually <cpp_installation>`
-
 .. _cpp_create_project:
 
-Create your project
-----------------------
+Building and Running a program
+-------------------------------
 
-Create a project, type:
+Create a project
+^^^^^^^^^^^^^^^^
+
+Type:
   
 .. code-bloock:: bash
 
@@ -61,7 +42,7 @@ Use ``new`` command to create some folders and a "Hello World" C++ main file. Of
     You can directly type ``myuser``, there's no need to register an account to use biicode.
     To upload and share contents, replace ``myuser`` with your real biicode username.
 
-This should be the resulting layout:
+This will be the resulting layout:
 
 .. code-block:: text
 
@@ -74,9 +55,9 @@ This should be the resulting layout:
   |    +-- deps
 
 
-Build and run your program
------------------------------
-Build and run the hello world application to check if everything works:
+Build and run it
+^^^^^^^^^^^^^^^^
+Build and run the hello world application, your first C/C++ program, to check everything works:
 
 .. code-block:: bash
 
@@ -147,10 +128,15 @@ Check your ``deps`` folder, the GoogleTest code is there.
 .. _cpp_publish_reuse:
 
 
-Upload and reuse code
--------------------------
+Publishing and reusing code
+---------------------------
 
-After using a lib already in biicode (GTest), let's see how to make your libs available on biicode.
+**Publish** to make your libs available on biicode.
+
+.. code-block:: bash
+
+  $ bii publish
+
 
 Make sure you've |biicode_signup|. It's **free**.
 
@@ -225,7 +211,7 @@ Build and run your project again to check everything is ok:
    [  PASSED  ] 1 test.
 
 
-Upload your code
+Publish your code
 ^^^^^^^^^^^^^^^^^
 
 **Publish** your source code to biicode:
@@ -260,7 +246,7 @@ Take a look into of your **block's bii folder** (~/myproject/blcd ocks/myuser/ma
 
 Reuse your code
 ^^^^^^^^^^^^^^^^
-Once your code is in biicode, you can **reuse it in any project**, even in a different computer. Let's **create a new project to try it**.
+Once the code is in biicode, you can **reuse it in any project**, even in a different computer. Let's **create a new project to try it**.
 
 Let's build a sum calculator and reuse the published **sum** function to build it:
 
@@ -288,7 +274,7 @@ Use ``bii find`` to let biicode find a suitable (compatible) version of our depe
 
 .. container:: infonote
 
-      You can also directly and explicitly specify them in the **bii/requirements.bii** file. 
+      You can also directly write them in the **bii/requirements.bii** file. 
       This example depends on your published block **myuser/math**, and it only has one version (number 0). 
       Create a folder named **bii** inside your ``~/mycalc/blocks/myuser/calc/`` and a **requirements.bii** file into it.
 

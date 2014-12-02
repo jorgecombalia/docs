@@ -22,7 +22,7 @@ Tag's default value is ``DEV``, but  ``ALPHA``, ``BETA`` and ``STABLE`` are also
 * Publish a ``DEV`` version. That's number ``0``.
 * Publish a ``DEV`` version. That's still number ``0``.
 * Publish a ``BETA`` version. That's number ``1``.
-* Publish a ``DEV`` version. That's number ``1``.
+* Publish a ``DEV`` version. That's number ``2``.
 * Publish a ``ALPHA`` version. That's number ``2``.
 * Publish a ``STABLE`` version. That's number ``3``.
 

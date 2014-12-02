@@ -3,26 +3,32 @@
 Installation
 ============
 
-These are the **first basic steps to understand and use biicode on any computer**.
-
 **Biicode** is a file-oriented Dependencies Manager for C and C++ developers.
-
 
 .. _download_client_binaries:
 
-Install Biicode and dev tools
---------------------------------
+Install Biicode
+-----------------
 
-Download the `latest release of the Biicode Installer <https://www.biicode.com/downloads>`_ and double-click the downloaded package to install it.
-Check its features on the :ref:`release notes <release_notes>`.
+**Download** `Biicode Installer <https://www.biicode.com/downloads>`_ and double-click the downloaded package to install it.
 
-Then, open the terminal and type:
+Open the terminal and **make sure biicode is installed**:
+
+
+.. code-block:: bash
+
+   ~$ bii --version
+
+
+Install C/C++ tools
+--------------------
+
+Then install required tools like CMake and MinGW or GCC:
 
 .. code-block:: bash
 
    ~$ bii setup:cpp
 
-To install tools like CMake and MinGW or GCC.
 
 .. container:: infonote
 
@@ -31,12 +37,11 @@ To install tools like CMake and MinGW or GCC.
 
 .. _alternative_install_debian:
 
-.. container:: infonote
+Debian based distributions
+---------------------------
+**Alternative install for Debian based distributions (Ubuntu, Raspbian)**
 
-
-    **Alternative install for Debian based distributions (Ubuntu, Raspbian)**
-
-    You can use the ``apt-get`` program to install biicode through the APT repository:
+Use the ``apt-get`` program to install biicode through the APT repository:
 
     Quick install: 
 
@@ -50,45 +55,45 @@ To install tools like CMake and MinGW or GCC.
     .. code-block:: bash
 
         # 1. Create a file named '/etc/apt/sources.list.d/biicode.list' and put the line corresponding to your linux distribution:
-        
-	Ubuntu 12:
-        	deb http://apt.biicode.com precise main
+            
+    	Ubuntu 12:
+            	deb http://apt.biicode.com precise main
 
-	Ubuntu 13:
-		deb http://apt.biicode.com saucy main
+    	Ubuntu 13:
+    		deb http://apt.biicode.com saucy main
 
-	Ubuntu 14:
-		deb http://apt.biicode.com trusty main
-		
-	Debian Wheezy:
-		deb http://apt.biicode.com wheezy main
-		
+    	Ubuntu 14:
+    		deb http://apt.biicode.com trusty main
+    		
+    	Debian Wheezy:
+    		deb http://apt.biicode.com wheezy main
+    		
 
-	# 2. Add our public key executing:
-	sudo wget -O /etc/apt/trusted.gpg.d/biicode.gpg http://apt.biicode.com/keyring.gpg       
- 
+    	# 2. Add our public key executing:
+    	sudo wget -O /etc/apt/trusted.gpg.d/biicode.gpg http://apt.biicode.com/keyring.gpg       
+     
         # 3. Execute apt-get update:
         sudo apt-get update 
-        
+            
         # 4. Execute apt-get install: 
         sudo apt-get -y install biicode
         
 
 .. _alternative_install_archlinux:
 
-.. container:: infonote
+Arch based distributions 
+------------------------
+
+**Alternative install for Archlinux based distributions (Manjaro, Arch Linux ARM, etc)**
+
+Biicode maintains a package at the Arch User Repository (AUR). Install it using your preferred package manager:
+
+.. code-block:: bash
+
+    sudo yaourt -S biicode
 
 
-    **Alternative install for Archlinux based distributions (Manjaro, Arch Linux ARM, etc)**
-
-    Biicode maintains a package at the Arch User Repository (AUR). You can install it using your preferred package manager:
-
-    .. code-block:: bash
-
-        sudo yaourt -S biicode
-
-
-    Since the package is maintained in the AUR, your package manager will notify you automatically when we update the package.
+The package is maintained in the AUR, so your package manager will notify you automatically when we update the package.
 
 
 .. _cpp_installation:
