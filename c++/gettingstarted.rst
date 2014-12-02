@@ -147,12 +147,11 @@ Publishing
 
 Enter your profile **www.biicode.com/myuser** to check what you've just uploaded.
 
-``bii publish`` publishes your code as **DEV**, meant for development and testing. 
-**DEV** publications are not frozen, every time you publish over DEV, **you overwrite the latest DEV version**.
+``bii publish`` publishes your code as ``DEV``, for development and testing. 
+Every time you publish over ``DEV``, you overwrite the latest ``DEV`` version.
 Tags available are: **DEV, ALPHA, BETA, STABLE**. Use them with ``bii publish --tag=STABLE``.
 
-
-Take a look into of your **block's bii folder** (~/myproject/blcd ocks/myuser/math/bii). **parents.bii** file tells you "who" is your parent (indicated with ``*`` symbol), i.e. the latest published version of your block.
+Take a look into your **block's bii folder** (~/myproject/blocks/myuser/math/bii/parents.bii). ``parents.bii`` file tells you "who" is your parent (indicated with ``*`` symbol), it stands for the latest published version of your block.
 
 ``parents.bii`` looks like this:
 
@@ -163,7 +162,6 @@ Take a look into of your **block's bii folder** (~/myproject/blcd ocks/myuser/ma
 
 
 Make sure you've |biicode_signup| to publish. It's **free**.
-
 
 .. |biicode_signup| raw:: html
    
