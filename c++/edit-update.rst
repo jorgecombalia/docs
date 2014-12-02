@@ -1,23 +1,29 @@
 .. _cpp_edit_update:
 
 
-Editing published code
-======================
+Open published code
+====================
 
-After reusing your **sum function** explained at :ref:`previous section <cpp_publish_reuse>`, 
-you could want to add some new functions to your published "math" block, e.g. a **substract function**, and use it in your block **myuser/calc** app.
+Open the block locally to modify and publish a new version of a block.
 
-You could do it in your **myproject** project, and publish from it. But imagine that you develop such project
-in a different computer, and you do not have a copy.
+.. code-block:: bash
 
-Biicode let you open, modify and publish a new version of an already published block in your current project.
-Next steps explain how to do it.
+  ~/$ bii init myproject
+  ~/$ cd myproject
+  ~/myproject$ bii open username/blockname
 
 
-Open and edit your dependencies
-----------------------------------
+.. container:: infonote
 
-Following with the previous example, your layout is something like this:
+    **A beginner?** check the :ref:`basic guide on opening a block <bii_open_command>`
+
+
+Opening and editing your dependencies
+--------------------------------------
+
+You've built a program and reused your **sum function** in the :ref:`Getting Started <cpp_publish_reuse>`. Now it's time to add new functionality to your published **myuser/math** block, like a **substract function**, and use it in your block **myuser/calc**.
+
+The layout is:
 
 .. code-block:: text
 
@@ -33,17 +39,16 @@ Following with the previous example, your layout is something like this:
   |    |    |    |    +-- operations.h
 
 
-We are going to add a new function, **substract**, to our published **myuser/math** block.
-To open the block **myuser/math** for edition, execute:
+Open the block **myuser/math** for editing on the same project, execute:
 
 .. code-block:: bash
 
   ~/mycalc$ bii open myuser/math
 
-This command retrieves the complete block to your ``blocks`` folder, and deletes it from your ``deps`` folder.
+``bii open command`` retrieves the complete block to your ``blocks`` folder, and deletes it from your ``deps`` folder.
 In this case, it will open the specific version you depend on. 
 
-Then your layout will change to this:
+The resulting layout is:
 
 .. code-block:: text
 
@@ -58,7 +63,7 @@ Then your layout will change to this:
   |    |    |    |    +-- operations.h
   |    +-- deps
 
-Now, we can add the new functionality and change the main.cpp to test the **substract** function.
+Now, add the new function, **substract** and use it on your main.cpp
 
 **operations.h**
 
@@ -96,22 +101,21 @@ Now, we can add the new functionality and change the main.cpp to test the **subs
    }
 
 
-You can build with ``bii cpp:build`` and run your tests ``myuser_math_main`` again to check everything is fine.
+Build, ``bii cpp:build`` and run your tests ``myuser_math_main`` to check everything is working.
 
 
-Publish updated code
+Publishing updated code
 -----------------------
 
-Now we can publish the math block again. As now we have 2 opened blocks (calc, math), we have
-to specify the name of the block that we want to publish:
+Publish the math block again. As you now have 2 blocks opened (calc, math), specify the name of the block you want to publish:
 
 .. code-block:: bash
 
    ~/mycalc$ bii publish myuser/math
 
-Remember that publish by default is done with the DEV tag, so it overwrites your last published version.
-You can check that it has been updated in your biicode web profile.
-A new version is not created and thus **parents.bii** file remains unmodified:
+By default, ``bii publish`` uses the DEV tag. Check on your online biicode profile it's been published.
+
+Using ``DEV`` tag, the latest ``DEV`` version is overrided, so **parents.bii** file remains unmodified:
 
 .. code-block:: bash
 
@@ -119,7 +123,7 @@ A new version is not created and thus **parents.bii** file remains unmodified:
    * myuser/math: 0
 
 
-Close edited block
+Closing edited block
 ---------------------
 
 You can now close the **myuser/math** block, it and it will return, with the code already updated, to your ``deps`` folder:

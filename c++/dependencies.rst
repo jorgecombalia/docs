@@ -1,8 +1,10 @@
 .. _cpp_dependencies:
 
-Control your dependencies
+Manage your dependencies
 =========================
 
+Depending on a lib on biicode
+---------------------------------
 Search the library you want on biicode and depend on it:
 
 .. code-block:: cpp
@@ -24,10 +26,10 @@ In a project like this one: ::
 
 .. container:: infonote
 
-    Here's more on this :ref:`Box2D example project <box2d>`
+    Here's more on this :ref:`Box2D example project <box2d>`.
 
 
-Execute :ref:`bii find command <bii_find_command>` to retrieve dependencies, 
+Execute :ref:`bii find command <bii_find_command>` to retrieve dependencies:
 
 .. code-block:: bash
 
@@ -48,8 +50,8 @@ That's because :underline:`myuser/box2d_example` depends on ``ericatto/box2d`` b
  	* Here's more information about :ref:`requirements.bii <requirements_bii>`.
 
 
-Modify the version you depend on
----------------------------------
+Modifying the version you depend on
+------------------------------------
 
 Manually edit your requirements.bii to depend on any version you want. For example, on Erin Catto's Box2D:
  
@@ -96,6 +98,78 @@ Write your preferred versions on your ``requirements.bii`` and biicode will use 
 	# This file contains your block external dependencies references
 	erincatto/box2d: 10
 	diego/glfw:1
+
+Checking Dependencies
+----------------------
+Execute ``bii deps`` to get all information related to biicode’s dependency scanning. It shows all dependencies, system, local and biicode's. 
+
+.. code-block:: bash
+
+	$ bii deps
+	INFO: Processing changes...
+	erincatto/box2d depends on:
+       diego/glfw: 0
+          include/GLFW/glfw3.h
+       system:
+          GL/gl.h
+          GL/glu.h
+          OpenGL/glu.h
+          algorithm
+          assert.h
+          float.h
+          inttypes.h
+          limits.h
+          math.h
+
+
+``bii deps --detail`` comes in handy to locate unresolved dependencies. 
+
+.. code-block:: bash
+
+	$ bii deps --detail
+	INFO: Processing changes...
+	erincatto/box2d depends on:
+	       diego/glfw: 0
+	          include/GLFW/glfw3.h
+	                Testbed/Framework/DebugDraw.cpp (E)
+	                Testbed/Framework/Main.cpp (E)
+	                Testbed/Framework/Test.h (E)
+	       erincatto/box2d (self)
+	          Box2D/Box2D.h
+	                HelloWorld/HelloWorld.cpp (E)
+	                Testbed/Framework/DebugDraw.h (E)
+	                Testbed/Framework/Test.h (E)
+	          Box2D/Collision/Shapes/b2ChainShape.cpp
+	                Box2D/Collision/Shapes/b2ChainShape.h (I)
+	       ...
+
+
+``bii deps --files`` let's you check the dependant files extension.
+
+.. code-block:: bash
+
+	$ bii deps --files
+	INFO: Processing changes...
+	erincatto/box2d
+	       Box2D/Box2D.h [CPP]
+	           erincatto/box2d/Box2D/Collision/Shapes/b2ChainShape.h (E)
+	           erincatto/box2d/Box2D/Collision/Shapes/b2CircleShape.h (E)
+	           erincatto/box2d/Box2D/Collision/Shapes/b2EdgeShape.h (E)
+	           erincatto/box2d/Box2D/Collision/Shapes/b2PolygonShape.h (E)
+	           erincatto/box2d/Box2D/Collision/b2BroadPhase.h (E)
+	       ...
+	       Box2D/Box2DConfig.cmake.in [TEXT]
+	       Box2D/CMakeLists.txt [TEXT]
+	       Box2D/Collision/Shapes/b2ChainShape.cpp [CPP]
+	           erincatto/box2d/Box2D/Collision/Shapes/b2ChainShape.h (E)
+	           erincatto/box2d/Box2D/Collision/Shapes/b2EdgeShape.h (E)
+	           new (S)
+	           string.h (S)
+	       ...
+
+.. container:: infonote
+
+ 	* Here's more information about :ref:`bii deps command<bii_deps_command>`.
 
 
 **Got any doubts?** |biicode_forum_link| or |biicode_write_us|.

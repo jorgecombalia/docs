@@ -20,15 +20,14 @@ Build your first C/C++ program and run a unit test using the |google_test_link| 
 
 Building and Running a program
 -------------------------------
-
 Create a project
 ^^^^^^^^^^^^^^^^
 
-Type:
-  
-.. code-bloock:: bash
+``bii init`` a folder to create a new project:
 
-  ~$ bii init myproject
+.. code-block:: bash
+
+    ~$ bii init myproject
 
 Use ``new`` command to create some folders and a "Hello World" C++ main file. Of course, you can do it manually too.
 
@@ -42,7 +41,7 @@ Use ``new`` command to create some folders and a "Hello World" C++ main file. Of
     You can directly type ``myuser``, there's no need to register an account to use biicode.
     To upload and share contents, replace ``myuser`` with your real biicode username.
 
-This will be the resulting layout:
+This is the resulting layout:
 
 .. code-block:: text
 
@@ -120,7 +119,7 @@ Now you're ready to build and run it:
   [  PASSED  ] 1 test.
 
 
-That's it, that output means Google Test was downloaded, configured and built in your project!
+**That's it**, that output means Google Test was downloaded, configured and built in your project!
 
 Check your ``deps`` folder, the GoogleTest code is there.
 
@@ -128,23 +127,48 @@ Check your ``deps`` folder, the GoogleTest code is there.
 .. _cpp_publish_reuse:
 
 
-Publishing and reusing code
----------------------------
+Publishing
+-----------
 
 **Publish** to make your libs available on biicode.
 
 .. code-block:: bash
 
-  $ bii publish
+   ~/myproject$ bii publish
+
+   INFO: *****************************
+   INFO: ***** Publishing public ****
+   INFO: *****************************
+   INFO: Successfully published myuser/math: 0
 
 
-Make sure you've |biicode_signup|. It's **free**.
+Enter your profile **www.biicode.com/myuser** to check what you've just uploaded.
+
+``bii publish`` publishes your code as **DEV**, meant for development and testing. 
+**DEV** publications are not frozen, every time you publish over DEV, **you overwrite the latest DEV version**.
+Tags available are: **DEV, ALPHA, BETA, STABLE**. Use them with ``bii publish --tag=STABLE``.
+
+
+Take a look into of your **block's bii folder** (~/myproject/blcd ocks/myuser/math/bii). **parents.bii** file tells you "who" is your parent (indicated with ``*`` symbol), i.e. the latest published version of your block.
+
+``parents.bii`` looks like this:
+
+.. code-block:: bash
+
+   # This file contains your block ancestors versions
+   * myuser/math: 0
+
+
+Make sure you've |biicode_signup| to publish. It's **free**.
 
 
 .. |biicode_signup| raw:: html
    
    <b><a href="https://www.biicode.com/accounts/signup" target="_blank">got an account</a></b>
 
+
+Developing and Reusing
+----------------------
 
 Write reusable code
 ^^^^^^^^^^^^^^^^^^^
@@ -220,28 +244,8 @@ Publish your code
 
    ~/myproject$ bii publish
 
-   INFO: *****************************
-   INFO: ***** Publishing public ****
-   INFO: *****************************
-   INFO: Successfully published myuser/math: 0
 
-
-Enter your profile **www.biicode.com/myuser** to check what you've just uploaded.
-
-``bii publish`` publishes your code as **DEV**, meant for development and testing. 
-**DEV** publications are not frozen, every time you publish over DEV, **you overwrite the latest DEV version**.
-Tags available are: **DEV, ALPHA, BETA, STABLE**. Use them with ``bii publish --tag=STABLE``.
-
-
-Take a look into of your **block's bii folder** (~/myproject/blcd ocks/myuser/math/bii). **parents.bii** file tells you "who" is your parent (indicated with ``*`` symbol), i.e. the latest published version of your block.
-
-``parents.bii`` looks like this:
-
-.. code-block:: bash
-
-   # This file contains your block ancestors versions
-   * myuser/math: 0
-
+Check in your profile **www.biicode.com/myuser** what you've just uploaded.
 
 
 Reuse your code

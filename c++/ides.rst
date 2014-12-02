@@ -18,12 +18,12 @@ Choose yours, and tell biicode to configure your project for that IDE:
 	$ bii cpp:configure -G "CMake Generator Name"
 
 
-``bii cpp:configure`` admits any CMake directives.
+``bii cpp:configure`` admits any CMake directives. ``bii cpp:configure`` directives are stored in your project's ``settings.bii`` file as the default settings for that project. 
 
 .. container:: infonote
 
      
-     ``bii clean`` command restores your project's settings to MinGW Makefiles (Windows) or UNIX Makefiles (MacOS and Linux) and no IDE.  
+     ``bii clean`` command restores your project's settings to MinGW Makefiles (Windows) or UNIX Makefiles (MacOS and Linux) and no IDE. 
 
 
 .. _ide_eclipse:
@@ -67,13 +67,12 @@ If you are using  Eclipse with **OS X** as development platform, you will need s
 Visual Studio
 -------------
 
-You can also generate a Microsoft Visual Studio project, for example a Visual Studio 10 project:
+Generate a Microsoft Visual Studio project, for a Visual Studio 10 project:
 
 .. code-block:: bash
 
    $ bii cpp:configure -G "Visual Studio 10"
 
-When you specify a generator, it'll be saved in your project ``settings.bii`` file each time, and it'll convert in your new default generator for this project.
 For example:
 
 .. code-block:: bash
